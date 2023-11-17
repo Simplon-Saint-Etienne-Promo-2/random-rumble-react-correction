@@ -5,7 +5,11 @@ import ProgressBar from './ProgressBar';
 const PlayerCard = ({ player }) => {
 
     return (
-        <div key={player.id} className="col-sm-3 card center" id={`joueur${player.id}`}>
+        <div key={player.id} className="col-sm-3 card center position-relative" id={`joueur${player.id}`}>
+            
+            {!player.canPlay &&
+                <div className='cantPlay'></div>
+            }
 
             <div className="card-body text-center">
                 <h5 className="card-title">{player.name}</h5>
@@ -15,10 +19,10 @@ const PlayerCard = ({ player }) => {
                 <span className="badge badge-danger ml-2 " id="degatSpanJ1"></span>
                 <div className="row ">
                     <div >
-                        <ButtonCapacity playerId={player.id} />
-                        <ButtonCapacity playerId={player.id} />
-                        <ButtonCapacity playerId={player.id} />
-                        <ButtonCapacity playerId={player.id} />
+                        <ButtonCapacity playerId={player.id} playerCanPlay={player.canPlay} />
+                        <ButtonCapacity playerId={player.id} playerCanPlay={player.canPlay} />
+                        <ButtonCapacity playerId={player.id} playerCanPlay={player.canPlay} />
+                        <ButtonCapacity playerId={player.id} playerCanPlay={player.canPlay} />
 
                     </div>
                 </div >

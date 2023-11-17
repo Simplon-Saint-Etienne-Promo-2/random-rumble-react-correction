@@ -459,7 +459,18 @@ background-color: #ff3547 !important;
 height: 100%;
 }
 
+.textWhite{
+  color: white;
+}
 
+.cantPlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(69, 69, 69, 0.388);
+}
 
 
 

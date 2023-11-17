@@ -7,9 +7,15 @@ const PlayerList = () => {
 
   return (
   <div className="row">
-    {players.map((player, index) => (
+    {players.map((player, index) => 
+      player.pv > 0 ?
+    (
       <PlayerCard key={index} player={player} />
-    ))}
+    ) : (
+      <p key={index} className="textWhite" >{player.name} est mort ...</p>
+    )
+    
+    )}
   </div>
   )
 };
